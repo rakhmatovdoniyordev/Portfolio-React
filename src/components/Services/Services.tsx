@@ -22,19 +22,7 @@ const Services: React.FC = () => {
             <FaPalette />
           </div>
           <div className="info">
-            <h3>Web Dizayner</h3>
-            <p>
-              Sizning saytingiz uchun turli xil Dizaynlar qilish hizmatini talif
-              qilaman.
-            </p>
-          </div>
-        </div>
-        <div className="card reveal">
-          <div className="service-icon">
-            <FaFileCode />
-          </div>
-          <div className="info">
-            <h3>Web Dasturchi</h3>
+            <h3>Frontend developer</h3>
             <p>
               Frontend dasturchi sifatida saytingizning frontend qismini mo'jaz
               ko'rinishda yasab beraman. Va o'z hizmatlarimga kafolat beraman.
@@ -43,14 +31,24 @@ const Services: React.FC = () => {
         </div>
         <div className="card reveal">
           <div className="service-icon">
+            <FaFileCode />
+          </div>
+          <div className="info">
+            <h3>Backend dasturchi Python(Learner)</h3>
+            <p>
+              Backend dasturchi sifatida saytingizning backend qismi kodlarini yozib beraman. Va o'z hizmatlarimga kafolat beraman.
+            </p>
+          </div>
+        </div>
+        <div className="card reveal">
+          <div className="service-icon">
             <FaObjectGroup />
           </div>
           <div className="info">
-            <h3>You Tuber</h3>
+            <h3>Dizayner</h3>
             <p>
-              Video montaj sohasini ham o'zlashtirganman. Sizga Videolaringizni
-              montaj qilish bo'yicha yordam berishim mumkin. Adobe Premier Pro
-              ilovasida.
+              Rasm va post larni montaj qilish bo'yicha yordam beraman.
+              Adobe Photoshop texnologiyasini bilaman. Va o'z hizmatlarimga kafolat beraman.
             </p>
           </div>
         </div>

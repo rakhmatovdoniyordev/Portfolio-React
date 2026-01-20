@@ -5,10 +5,11 @@ import { Grid, IconButton, Tooltip } from "@mui/material";
 import { SvgIconComponent } from "@mui/icons-material";
 import { Html, Css, Javascript } from "@mui/icons-material";
 import { SiMui, SiReactquery } from "react-icons/si";
-import { FaBootstrap, FaGithub, FaReact } from "react-icons/fa";
-import { BiLogoTypescript } from "react-icons/bi";
-import { TbBrandNextjs } from "react-icons/tb";
+import { FaBootstrap, FaGithub, FaReact, FaPython } from "react-icons/fa";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
+import { TbBrandNextjs, TbBrandRedux } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { DiDjango, DiDocker } from "react-icons/di";
 
 interface Skill {
   name: string;
@@ -21,12 +22,17 @@ const skills: Skill[] = [
   { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#4361ee" },
   { name: "Bootstrap", icon: FaBootstrap, color: "#4361ee" },
   { name: "Material-UI", icon: SiMui, color: "#0081CB" },
+  { name: "GitHub", icon: FaGithub, color: "#7d8597" },
   { name: "JavaScript", icon: Javascript, color: "#F7DF1E" },
   { name: "React", icon: FaReact, color: "#61DAFB" },
+  { name: "React Query", icon: SiReactquery, color: "#bc3908" },
+  { name: "Redux", icon: TbBrandRedux, color: "#764ABC" },
   { name: "Next.js", icon: TbBrandNextjs, color: "#00b4d8" },
   { name: "TypeScript", icon: BiLogoTypescript, color: "#3178C6" },
-  { name: "GitHub", icon: FaGithub, color: "#7d8597" },
-  { name: "React Query", icon: SiReactquery, color: "#bc3908" },
+  { name: "Python", icon: FaPython, color: "#3572A5" },
+  { name: "Django", icon: DiDjango, color: "#3DB382" },
+  { name: "Docker", icon: DiDocker, color: "#08B5DD" },
+  { name: "PostgreSQL", icon: BiLogoPostgresql, color: "#3178C6" },
 ];
 
 const Skills: React.FC = () => {
@@ -52,22 +58,23 @@ const Skills: React.FC = () => {
           </h2>
           <p>
             • HTML, CSS, va JavaScript: Veb-sahifalarni zamonaviy, responsiv va
-            interaktiv tarzda yaratishda mustahkam bilim va tajribaga egaman. <br />
+            interaktiv tarzda yaratishda mustahkam bilim va tajribaga egaman.{" "}
+            <br />
+            <br />
             • ReactJS: Komponent asosidagi frontend dasturlashda chuqur
             tushuncha va optimallashtirilgan yechimlar ishlab chiqishda yetuk
             tajribam bor. <br />
-            • UI/UX Dizayn: Foydalanuvchilarning qulayligi va
-            estetik talablari asosida veb-interfeyslar yaratish bo‘yicha
-            tajribaga egaman. <br />
-            • CSS Frameworklari: Bootstrap, TailwindCSS va
-            Material-UI kabi vositalar yordamida tezkor va professional
-            interfeyslar yarataman. <br />
-            • JavaScript kutubxonalari: Axios, Redux, va
-            React Query kabi vositalar bilan samarali ma'lumotlar boshqaruvi va
-            API integratsiyalarini amalga oshiraman. <br />
-            • Tools va Platformalar: VS Code, Figma, Webpack, Vite, va Postman kabi vositalardan samarali foydalanaman.
+            <br />• CSS Frameworklari: Bootstrap, TailwindCSS va Material-UI
+            kabi vositalar yordamida tezkor va professional interfeyslar
+            yarataman. <br />
+            <br />
+            • JavaScript kutubxonalari: Axios, Redux, va React Query kabi
+            vositalar bilan samarali ma'lumotlar boshqaruvi va API
+            integratsiyalarini amalga oshiraman. <br />
+            <br />• Tools va Platformalar: VS Code, Figma, Vite, Swager va
+            Postman kabi vositalardan samarali foydalanaman.
           </p>
-          <a href="#" className="btn">
+          <a href="https://github.com/rakhmatovdoniyordev" className="btn">
             Batafsil
           </a>
         </div>
@@ -76,11 +83,16 @@ const Skills: React.FC = () => {
           spacing={4}
           justifyContent="center"
           data-aos="fade-left"
-          sx={{ maxWidth: "900px", margin: "0 auto" }}
+          sx={{ maxWidth: "500px", margin: "0 auto" }}
           columns={4}
         >
           {skills.map((skill) => (
-            <Grid item key={skill.name} xs={1}>
+            <Grid
+              item
+              key={skill.name}
+              xs={1}
+              style={{ padding: "0", margin: "0" }}
+            >
               <Tooltip title={skill.name} arrow>
                 <IconButton
                   sx={{
@@ -93,7 +105,7 @@ const Skills: React.FC = () => {
                     },
                   }}
                 >
-                  <skill.icon style={{ fontSize: "36px" }} />
+                  <skill.icon style={{ fontSize: "30px" }} />
                 </IconButton>
               </Tooltip>
             </Grid>

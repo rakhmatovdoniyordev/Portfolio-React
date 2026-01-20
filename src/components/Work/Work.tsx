@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import img1 from "../../assets/logo.svg"
+import nornlight from "../../assets/logo.svg"
+import biletick from "../../assets/biletick.png"
 
 const Work: React.FC = () => {
     useEffect(() => {
@@ -22,14 +23,14 @@ const Work: React.FC = () => {
         <div className="card reveal">
           <div className="card-img">
             <a href="https://nornlight-delta.vercel.app/">
-              <img src={img1}  alt="Work 1" />
+              <img src={nornlight}  alt="Work 1" />
             </a>
           </div>
         </div>
         <div className="card reveal">
-          <div className="card-img" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+          <div className="card-img">
           <a href="https://biletick.vercel.app/" style={{ textDecoration: "none"}}>
-              <h2 style={{color: "red", fontSize: "40px", textDecoration: "none"}}>BILETICK</h2>
+              <img src={biletick} alt="" />
             </a>
           </div>
         </div>

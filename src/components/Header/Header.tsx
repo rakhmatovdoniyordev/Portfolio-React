@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Header: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -6,11 +6,11 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 200);
+      setIsSticky(window.scrollY > 600);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => {
@@ -22,16 +22,41 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={isSticky ? 'sticky' : ''}>
-      <a href="#" className="brand">Doniyor</a>
-      <div className={`menu-btn ${isMenuActive ? 'active' : ''}`} onClick={toggleMenu}></div>
-      <nav className={`navigation ${isMenuActive ? 'active' : ''}`}>
-        <a href="#Home" onClick={closeMenu}>Home</a>
-        <a href="#About" onClick={closeMenu}>About</a>
-        <a href="#Skills" onClick={closeMenu}>Skills</a>
-        <a href="#Services" onClick={closeMenu}>Services</a>
-        <a href="#Work" onClick={closeMenu}>Work</a>
-        <a href="#Contact" onClick={closeMenu}>Contact</a>
+    <header
+      className={`${isSticky ? "sticky" : ""} ${
+        isMenuActive ? "menu-open" : ""
+      }`}
+    >
+      <a href="#" className="brand">
+        Doniyor
+      </a>
+      <div
+        className={`menu-btn ${isMenuActive ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav className={`navigation ${isMenuActive ? "active" : ""}`}>
+        <a href="#" onClick={closeMenu}>
+          Home
+        </a>
+        <a href="#About" onClick={closeMenu}>
+          About
+        </a>
+        <a href="#Skills" onClick={closeMenu}>
+          Skills
+        </a>
+        <a href="#Services" onClick={closeMenu}>
+          Services
+        </a>
+        <a href="#Work" onClick={closeMenu}>
+          Work
+        </a>
+        <a href="#Contact" onClick={closeMenu}>
+          Contact
+        </a>
       </nav>
     </header>
   );
